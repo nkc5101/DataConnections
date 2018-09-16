@@ -3,6 +3,7 @@ package dataconnections;
 
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,6 +11,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class FBISiteParser {
+    ArrayList<String[]> tableData = new ArrayList<>();
     
     public void parse() throws IOException {
         
@@ -20,8 +22,9 @@ public class FBISiteParser {
         
         Elements headers = table.select("th");
         
-        ArrayList crimes = new ArrayList();
-        ArrayList years = new ArrayList();
+        ArrayList crimes = new ArrayList<>();
+        ArrayList years = new ArrayList<>();
+        
         
         for (int i = 1; i < headers.size(); i++) {
             
@@ -53,24 +56,32 @@ public class FBISiteParser {
                 years.add(headerText);
             }
             
-            System.out.println(header);
+           /* System.out.println(header);
             System.out.println(id);
             System.out.println(idNum);
             System.out.println(headerText);
+*/
         }
         
-        System.out.println(crimes);
-        System.out.println(years);
+       // System.out.println(crimes);
+       // System.out.println(years);
         
         Elements rows = table.select("tr");
         
         for (int i = 1; i < rows.size(); i++) {
-            
+            String[] data;
             Element row = rows.get(i);
             Elements columns = row.select("td");
+            data = columns.text().split(" ");
+            tableData.add(data);
             
-            System.out.println(columns);
+            
+            
         }
+    }
+    public ArrayList<String[]> getData(){
+        
+        return tableData;
     }
     
 }

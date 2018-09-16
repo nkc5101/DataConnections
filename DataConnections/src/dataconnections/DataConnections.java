@@ -3,6 +3,8 @@ package dataconnections;
 import javafx.scene.control.Button;
 import javafx.geometry.Insets;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -23,7 +25,17 @@ public class DataConnections extends Application {
      
      @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("DataConnections.fxml"));
+        
+        FBISiteParser site = new FBISiteParser();
+        site.parse();
+        ArrayList<String[]> data = site.getData();
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("DataConnections.fxml"));
+        Parent root = (Parent) loader.load();
+        DataConnectionsController controller = loader.getController();
+        controller.setData(data);
+        
+        
         
         Scene scene = new Scene(root);
         
@@ -32,8 +44,7 @@ public class DataConnections extends Application {
     }
     
     public static void main(String[] args) throws IOException {
-       // FBISiteParser site = new FBISiteParser();
-       // site.parse();
+        
         launch(args);
         
     }

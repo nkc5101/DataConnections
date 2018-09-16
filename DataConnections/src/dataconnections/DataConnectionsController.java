@@ -2,6 +2,7 @@
 package dataconnections;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,6 +17,8 @@ import javafx.scene.input.MouseEvent;
 
 
 public class DataConnectionsController implements Initializable {
+    
+    ArrayList<String[]> tableData;
     
     @FXML
     private LineChart<String, Number> lineChart;
@@ -310,5 +313,9 @@ public class DataConnectionsController implements Initializable {
             });
             
         }
+    }
+    
+    public void setData(ArrayList<String[]> data){
+        tableData = data;
     }
 }
