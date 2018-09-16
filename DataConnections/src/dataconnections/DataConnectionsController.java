@@ -50,27 +50,36 @@ public class DataConnectionsController implements Initializable {
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        series.getData().add(new XYChart.Data("1997", 611 ));
-        series.getData().add(new XYChart.Data("1998", 567.6));
-        series.getData().add(new XYChart.Data("1999", 523));
-        series.getData().add(new XYChart.Data("2000", 506.5));
-        series.getData().add(new XYChart.Data("2001", 504.5));
-        series.getData().add(new XYChart.Data("2002", 494.4));
-        series.getData().add(new XYChart.Data("2003", 475.8));
-        series.getData().add(new XYChart.Data("2004", 463.2));
-        series.getData().add(new XYChart.Data("2005", 469.0));
-        series.getData().add(new XYChart.Data("2006", 479.3));
-        series.getData().add(new XYChart.Data("2007", 471.8));
-        series.getData().add(new XYChart.Data("2008", 458.6));
-        series.getData().add(new XYChart.Data("2009", 431.9));
-        series.getData().add(new XYChart.Data("2010", 404.5));
-        series.getData().add(new XYChart.Data("2011", 387.1));        
-        series.getData().add(new XYChart.Data("2012", 387.8));        
-        series.getData().add(new XYChart.Data("2013", 369.1));        
-        series.getData().add(new XYChart.Data("2014", 361.6));        
-        series.getData().add(new XYChart.Data("2015", 373.7));
-        series.getData().add(new XYChart.Data("2016", 386.3));
-        series.setName("Crimes");
+        
+            
+            for(int j=0; j<tableData.size(); j++){
+                if(tableData.get(j)[2].contains(".")){
+                    int error = tableData.get(j)[2].indexOf(".");
+                    tableData.get(j)[2] = tableData.get(j)[2].substring(0, error);
+                } 
+                
+            }
+            series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[2])));
+            series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[2])));
+            series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[2])));
+            series.getData().add(new XYChart.Data("2000", Integer.parseInt(tableData.get(3)[2])));
+            series.getData().add(new XYChart.Data("2001", Integer.parseInt(tableData.get(4)[2])));
+            series.getData().add(new XYChart.Data("2002", Integer.parseInt(tableData.get(5)[2])));
+            series.getData().add(new XYChart.Data("2003", Integer.parseInt(tableData.get(6)[2])));
+            series.getData().add(new XYChart.Data("2004", Integer.parseInt(tableData.get(7)[2])));
+            series.getData().add(new XYChart.Data("2005", Integer.parseInt(tableData.get(8)[2])));
+            series.getData().add(new XYChart.Data("2006", Integer.parseInt(tableData.get(9)[2])));
+            series.getData().add(new XYChart.Data("2007", Integer.parseInt(tableData.get(10)[2])));
+            series.getData().add(new XYChart.Data("2008", Integer.parseInt(tableData.get(11)[2])));
+            series.getData().add(new XYChart.Data("2009", Integer.parseInt(tableData.get(12)[2])));
+            series.getData().add(new XYChart.Data("2010", Integer.parseInt(tableData.get(13)[2])));
+            series.getData().add(new XYChart.Data("2011", Integer.parseInt(tableData.get(14)[2])));
+            series.getData().add(new XYChart.Data("2012", Integer.parseInt(tableData.get(15)[2])));
+            series.getData().add(new XYChart.Data("2013", Integer.parseInt(tableData.get(16)[2])));
+            series.getData().add(new XYChart.Data("2014", Integer.parseInt(tableData.get(17)[2])));
+            series.getData().add(new XYChart.Data("2015", Integer.parseInt(tableData.get(18)[2])));
+            series.getData().add(new XYChart.Data("2016", Integer.parseInt(tableData.get(19)[2])));
+        series.setName("Violent Crime Rate");
         
         lineChart.getData().addAll(series);
         
@@ -95,27 +104,36 @@ public class DataConnectionsController implements Initializable {
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        series.getData().add(new XYChart.Data("1997", 611 ));
-        series.getData().add(new XYChart.Data("1998", 567.6));
-        series.getData().add(new XYChart.Data("1999", 523));
-        series.getData().add(new XYChart.Data("2000", 506.5));
-        series.getData().add(new XYChart.Data("2001", 504.5));
-        series.getData().add(new XYChart.Data("2002", 494.4));
-        series.getData().add(new XYChart.Data("2003", 475.8));
-        series.getData().add(new XYChart.Data("2004", 463.2));
-        series.getData().add(new XYChart.Data("2005", 469.0));
-        series.getData().add(new XYChart.Data("2006", 479.3));
-        series.getData().add(new XYChart.Data("2007", 471.8));
-        series.getData().add(new XYChart.Data("2008", 458.6));
-        series.getData().add(new XYChart.Data("2009", 431.9));
-        series.getData().add(new XYChart.Data("2010", 404.5));
-        series.getData().add(new XYChart.Data("2011", 387.1));        
-        series.getData().add(new XYChart.Data("2012", 387.8));        
-        series.getData().add(new XYChart.Data("2013", 369.1));        
-        series.getData().add(new XYChart.Data("2014", 361.6));        
-        series.getData().add(new XYChart.Data("2015", 373.7));
-        series.getData().add(new XYChart.Data("2016", 386.3));
-        series.setName("Murder and Nonnegligent Manslaughter");
+        
+            
+            for(int j=0; j<tableData.size(); j++){
+                if(tableData.get(j)[4].contains(".")){
+                    int error = tableData.get(j)[4].indexOf(".");
+                    tableData.get(j)[4] = tableData.get(j)[4].substring(0, error);
+                } 
+                
+            }
+            series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[4])));
+            series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[4])));
+            series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[4])));
+            series.getData().add(new XYChart.Data("2000", Integer.parseInt(tableData.get(3)[4])));
+            series.getData().add(new XYChart.Data("2001", Integer.parseInt(tableData.get(4)[4])));
+            series.getData().add(new XYChart.Data("2002", Integer.parseInt(tableData.get(5)[4])));
+            series.getData().add(new XYChart.Data("2003", Integer.parseInt(tableData.get(6)[4])));
+            series.getData().add(new XYChart.Data("2004", Integer.parseInt(tableData.get(7)[4])));
+            series.getData().add(new XYChart.Data("2005", Integer.parseInt(tableData.get(8)[4])));
+            series.getData().add(new XYChart.Data("2006", Integer.parseInt(tableData.get(9)[4])));
+            series.getData().add(new XYChart.Data("2007", Integer.parseInt(tableData.get(10)[4])));
+            series.getData().add(new XYChart.Data("2008", Integer.parseInt(tableData.get(11)[4])));
+            series.getData().add(new XYChart.Data("2009", Integer.parseInt(tableData.get(12)[4])));
+            series.getData().add(new XYChart.Data("2010", Integer.parseInt(tableData.get(13)[4])));
+            series.getData().add(new XYChart.Data("2011", Integer.parseInt(tableData.get(14)[4])));
+            series.getData().add(new XYChart.Data("2012", Integer.parseInt(tableData.get(15)[4])));
+            series.getData().add(new XYChart.Data("2013", Integer.parseInt(tableData.get(16)[4])));
+            series.getData().add(new XYChart.Data("2014", Integer.parseInt(tableData.get(17)[4])));
+            series.getData().add(new XYChart.Data("2015", Integer.parseInt(tableData.get(18)[4])));
+            series.getData().add(new XYChart.Data("2016", Integer.parseInt(tableData.get(19)[4])));
+        series.setName("Murder and Nonnegligent Manslaughter Rate");
         
         lineChart.getData().addAll(series);
         
@@ -140,27 +158,36 @@ public class DataConnectionsController implements Initializable {
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        series.getData().add(new XYChart.Data("1997", 611 ));
-        series.getData().add(new XYChart.Data("1998", 567.6));
-        series.getData().add(new XYChart.Data("1999", 523));
-        series.getData().add(new XYChart.Data("2000", 506.5));
-        series.getData().add(new XYChart.Data("2001", 504.5));
-        series.getData().add(new XYChart.Data("2002", 494.4));
-        series.getData().add(new XYChart.Data("2003", 475.8));
-        series.getData().add(new XYChart.Data("2004", 463.2));
-        series.getData().add(new XYChart.Data("2005", 469.0));
-        series.getData().add(new XYChart.Data("2006", 479.3));
-        series.getData().add(new XYChart.Data("2007", 471.8));
-        series.getData().add(new XYChart.Data("2008", 458.6));
-        series.getData().add(new XYChart.Data("2009", 431.9));
-        series.getData().add(new XYChart.Data("2010", 404.5));
-        series.getData().add(new XYChart.Data("2011", 387.1));        
-        series.getData().add(new XYChart.Data("2012", 387.8));        
-        series.getData().add(new XYChart.Data("2013", 369.1));        
-        series.getData().add(new XYChart.Data("2014", 361.6));        
-        series.getData().add(new XYChart.Data("2015", 373.7));
-        series.getData().add(new XYChart.Data("2016", 386.3));
-        series.setName("Rapes");
+        
+            
+            for(int j=0; j<tableData.size(); j++){
+                if(tableData.get(j)[8].contains(".")){
+                    int error = tableData.get(j)[8].indexOf(".");
+                    tableData.get(j)[8] = tableData.get(j)[8].substring(0, error);
+                } 
+                
+            }
+            series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[8])));
+            series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[8])));
+            series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[8])));
+            series.getData().add(new XYChart.Data("2000", Integer.parseInt(tableData.get(3)[8])));
+            series.getData().add(new XYChart.Data("2001", Integer.parseInt(tableData.get(4)[8])));
+            series.getData().add(new XYChart.Data("2002", Integer.parseInt(tableData.get(5)[8])));
+            series.getData().add(new XYChart.Data("2003", Integer.parseInt(tableData.get(6)[8])));
+            series.getData().add(new XYChart.Data("2004", Integer.parseInt(tableData.get(7)[8])));
+            series.getData().add(new XYChart.Data("2005", Integer.parseInt(tableData.get(8)[8])));
+            series.getData().add(new XYChart.Data("2006", Integer.parseInt(tableData.get(9)[8])));
+            series.getData().add(new XYChart.Data("2007", Integer.parseInt(tableData.get(10)[8])));
+            series.getData().add(new XYChart.Data("2008", Integer.parseInt(tableData.get(11)[8])));
+            series.getData().add(new XYChart.Data("2009", Integer.parseInt(tableData.get(12)[8])));
+            series.getData().add(new XYChart.Data("2010", Integer.parseInt(tableData.get(13)[8])));
+            series.getData().add(new XYChart.Data("2011", Integer.parseInt(tableData.get(14)[8])));
+            series.getData().add(new XYChart.Data("2012", Integer.parseInt(tableData.get(15)[8])));
+            series.getData().add(new XYChart.Data("2013", Integer.parseInt(tableData.get(16)[8])));
+            series.getData().add(new XYChart.Data("2014", Integer.parseInt(tableData.get(17)[8])));
+            series.getData().add(new XYChart.Data("2015", Integer.parseInt(tableData.get(18)[8])));
+            series.getData().add(new XYChart.Data("2016", Integer.parseInt(tableData.get(19)[8])));
+        series.setName("Rape Rate");
         
         lineChart.getData().addAll(series);
         
@@ -185,27 +212,36 @@ public class DataConnectionsController implements Initializable {
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        series.getData().add(new XYChart.Data("1997", 611 ));
-        series.getData().add(new XYChart.Data("1998", 567.6));
-        series.getData().add(new XYChart.Data("1999", 523));
-        series.getData().add(new XYChart.Data("2000", 506.5));
-        series.getData().add(new XYChart.Data("2001", 504.5));
-        series.getData().add(new XYChart.Data("2002", 494.4));
-        series.getData().add(new XYChart.Data("2003", 475.8));
-        series.getData().add(new XYChart.Data("2004", 463.2));
-        series.getData().add(new XYChart.Data("2005", 469.0));
-        series.getData().add(new XYChart.Data("2006", 479.3));
-        series.getData().add(new XYChart.Data("2007", 471.8));
-        series.getData().add(new XYChart.Data("2008", 458.6));
-        series.getData().add(new XYChart.Data("2009", 431.9));
-        series.getData().add(new XYChart.Data("2010", 404.5));
-        series.getData().add(new XYChart.Data("2011", 387.1));        
-        series.getData().add(new XYChart.Data("2012", 387.8));        
-        series.getData().add(new XYChart.Data("2013", 369.1));        
-        series.getData().add(new XYChart.Data("2014", 361.6));        
-        series.getData().add(new XYChart.Data("2015", 373.7));
-        series.getData().add(new XYChart.Data("2016", 386.3));
-        series.setName("Robbery");
+        
+            
+            for(int j=0; j<tableData.size(); j++){
+                if(tableData.get(j)[10].contains(".")){
+                    int error = tableData.get(j)[10].indexOf(".");
+                    tableData.get(j)[10] = tableData.get(j)[10].substring(0, error);
+                } 
+                
+            }
+            series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[10])));
+            series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[10])));
+            series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[10])));
+            series.getData().add(new XYChart.Data("2000", Integer.parseInt(tableData.get(3)[10])));
+            series.getData().add(new XYChart.Data("2001", Integer.parseInt(tableData.get(4)[10])));
+            series.getData().add(new XYChart.Data("2002", Integer.parseInt(tableData.get(5)[10])));
+            series.getData().add(new XYChart.Data("2003", Integer.parseInt(tableData.get(6)[10])));
+            series.getData().add(new XYChart.Data("2004", Integer.parseInt(tableData.get(7)[10])));
+            series.getData().add(new XYChart.Data("2005", Integer.parseInt(tableData.get(8)[10])));
+            series.getData().add(new XYChart.Data("2006", Integer.parseInt(tableData.get(9)[10])));
+            series.getData().add(new XYChart.Data("2007", Integer.parseInt(tableData.get(10)[10])));
+            series.getData().add(new XYChart.Data("2008", Integer.parseInt(tableData.get(11)[10])));
+            series.getData().add(new XYChart.Data("2009", Integer.parseInt(tableData.get(12)[10])));
+            series.getData().add(new XYChart.Data("2010", Integer.parseInt(tableData.get(13)[10])));
+            series.getData().add(new XYChart.Data("2011", Integer.parseInt(tableData.get(14)[10])));
+            series.getData().add(new XYChart.Data("2012", Integer.parseInt(tableData.get(15)[10])));
+            series.getData().add(new XYChart.Data("2013", Integer.parseInt(tableData.get(16)[10])));
+            series.getData().add(new XYChart.Data("2014", Integer.parseInt(tableData.get(17)[10])));
+            series.getData().add(new XYChart.Data("2015", Integer.parseInt(tableData.get(18)[10])));
+            series.getData().add(new XYChart.Data("2016", Integer.parseInt(tableData.get(19)[10])));
+        series.setName("Robbery Rate");
         
         lineChart.getData().addAll(series);
         
@@ -230,27 +266,36 @@ public class DataConnectionsController implements Initializable {
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        series.getData().add(new XYChart.Data("1997", 611 ));
-        series.getData().add(new XYChart.Data("1998", 567.6));
-        series.getData().add(new XYChart.Data("1999", 523));
-        series.getData().add(new XYChart.Data("2000", 506.5));
-        series.getData().add(new XYChart.Data("2001", 504.5));
-        series.getData().add(new XYChart.Data("2002", 494.4));
-        series.getData().add(new XYChart.Data("2003", 475.8));
-        series.getData().add(new XYChart.Data("2004", 463.2));
-        series.getData().add(new XYChart.Data("2005", 469.0));
-        series.getData().add(new XYChart.Data("2006", 479.3));
-        series.getData().add(new XYChart.Data("2007", 471.8));
-        series.getData().add(new XYChart.Data("2008", 458.6));
-        series.getData().add(new XYChart.Data("2009", 431.9));
-        series.getData().add(new XYChart.Data("2010", 404.5));
-        series.getData().add(new XYChart.Data("2011", 387.1));        
-        series.getData().add(new XYChart.Data("2012", 387.8));        
-        series.getData().add(new XYChart.Data("2013", 369.1));        
-        series.getData().add(new XYChart.Data("2014", 361.6));        
-        series.getData().add(new XYChart.Data("2015", 373.7));
-        series.getData().add(new XYChart.Data("2016", 386.3));
-        series.setName("Aggravated Assault");
+        
+            
+            for(int j=0; j<tableData.size(); j++){
+                if(tableData.get(j)[12].contains(".")){
+                    int error = tableData.get(j)[12].indexOf(".");
+                    tableData.get(j)[12] = tableData.get(j)[12].substring(0, error);
+                } 
+                
+            }
+            series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[12])));
+            series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[12])));
+            series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[12])));
+            series.getData().add(new XYChart.Data("2000", Integer.parseInt(tableData.get(3)[12])));
+            series.getData().add(new XYChart.Data("2001", Integer.parseInt(tableData.get(4)[12])));
+            series.getData().add(new XYChart.Data("2002", Integer.parseInt(tableData.get(5)[12])));
+            series.getData().add(new XYChart.Data("2003", Integer.parseInt(tableData.get(6)[12])));
+            series.getData().add(new XYChart.Data("2004", Integer.parseInt(tableData.get(7)[12])));
+            series.getData().add(new XYChart.Data("2005", Integer.parseInt(tableData.get(8)[12])));
+            series.getData().add(new XYChart.Data("2006", Integer.parseInt(tableData.get(9)[12])));
+            series.getData().add(new XYChart.Data("2007", Integer.parseInt(tableData.get(10)[12])));
+            series.getData().add(new XYChart.Data("2008", Integer.parseInt(tableData.get(11)[12])));
+            series.getData().add(new XYChart.Data("2009", Integer.parseInt(tableData.get(12)[12])));
+            series.getData().add(new XYChart.Data("2010", Integer.parseInt(tableData.get(13)[12])));
+            series.getData().add(new XYChart.Data("2011", Integer.parseInt(tableData.get(14)[12])));
+            series.getData().add(new XYChart.Data("2012", Integer.parseInt(tableData.get(15)[12])));
+            series.getData().add(new XYChart.Data("2013", Integer.parseInt(tableData.get(16)[12])));
+            series.getData().add(new XYChart.Data("2014", Integer.parseInt(tableData.get(17)[12])));
+            series.getData().add(new XYChart.Data("2015", Integer.parseInt(tableData.get(18)[12])));
+            series.getData().add(new XYChart.Data("2016", Integer.parseInt(tableData.get(19)[12])));
+        series.setName("Aggravated Assault Rate");
         
         lineChart.getData().addAll(series);
         
@@ -275,27 +320,36 @@ public class DataConnectionsController implements Initializable {
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        series.getData().add(new XYChart.Data("1997", 611 ));
-        series.getData().add(new XYChart.Data("1998", 567.6));
-        series.getData().add(new XYChart.Data("1999", 523));
-        series.getData().add(new XYChart.Data("2000", 506.5));
-        series.getData().add(new XYChart.Data("2001", 504.5));
-        series.getData().add(new XYChart.Data("2002", 494.4));
-        series.getData().add(new XYChart.Data("2003", 475.8));
-        series.getData().add(new XYChart.Data("2004", 463.2));
-        series.getData().add(new XYChart.Data("2005", 469.0));
-        series.getData().add(new XYChart.Data("2006", 479.3));
-        series.getData().add(new XYChart.Data("2007", 471.8));
-        series.getData().add(new XYChart.Data("2008", 458.6));
-        series.getData().add(new XYChart.Data("2009", 431.9));
-        series.getData().add(new XYChart.Data("2010", 404.5));
-        series.getData().add(new XYChart.Data("2011", 387.1));        
-        series.getData().add(new XYChart.Data("2012", 387.8));        
-        series.getData().add(new XYChart.Data("2013", 369.1));        
-        series.getData().add(new XYChart.Data("2014", 361.6));        
-        series.getData().add(new XYChart.Data("2015", 373.7));
-        series.getData().add(new XYChart.Data("2016", 386.3));
-        series.setName("Burglary");
+        
+            
+            for(int j=0; j<tableData.size(); j++){
+                if(tableData.get(j)[16].contains(".")){
+                    int error = tableData.get(j)[16].indexOf(".");
+                    tableData.get(j)[16] = tableData.get(j)[16].substring(0, error);
+                } 
+                
+            }
+            series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[16])));
+            series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[16])));
+            series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[16])));
+            series.getData().add(new XYChart.Data("2000", Integer.parseInt(tableData.get(3)[16])));
+            series.getData().add(new XYChart.Data("2001", Integer.parseInt(tableData.get(4)[16])));
+            series.getData().add(new XYChart.Data("2002", Integer.parseInt(tableData.get(5)[16])));
+            series.getData().add(new XYChart.Data("2003", Integer.parseInt(tableData.get(6)[16])));
+            series.getData().add(new XYChart.Data("2004", Integer.parseInt(tableData.get(7)[16])));
+            series.getData().add(new XYChart.Data("2005", Integer.parseInt(tableData.get(8)[16])));
+            series.getData().add(new XYChart.Data("2006", Integer.parseInt(tableData.get(9)[16])));
+            series.getData().add(new XYChart.Data("2007", Integer.parseInt(tableData.get(10)[16])));
+            series.getData().add(new XYChart.Data("2008", Integer.parseInt(tableData.get(11)[16])));
+            series.getData().add(new XYChart.Data("2009", Integer.parseInt(tableData.get(12)[16])));
+            series.getData().add(new XYChart.Data("2010", Integer.parseInt(tableData.get(13)[16])));
+            series.getData().add(new XYChart.Data("2011", Integer.parseInt(tableData.get(14)[16])));
+            series.getData().add(new XYChart.Data("2012", Integer.parseInt(tableData.get(15)[16])));
+            series.getData().add(new XYChart.Data("2013", Integer.parseInt(tableData.get(16)[16])));
+            series.getData().add(new XYChart.Data("2014", Integer.parseInt(tableData.get(17)[16])));
+            series.getData().add(new XYChart.Data("2015", Integer.parseInt(tableData.get(18)[16])));
+            series.getData().add(new XYChart.Data("2016", Integer.parseInt(tableData.get(19)[16])));
+        series.setName("Burglary Rate");
         
         lineChart.getData().addAll(series);
         
