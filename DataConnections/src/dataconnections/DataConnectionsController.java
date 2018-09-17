@@ -53,12 +53,16 @@ public class DataConnectionsController implements Initializable {
         
             
             for(int j=0; j<tableData.size(); j++){
+                
                 if(tableData.get(j)[2].contains(".")){
+                    
                     int error = tableData.get(j)[2].indexOf(".");
                     tableData.get(j)[2] = tableData.get(j)[2].substring(0, error);
+                    
                 } 
                 
             }
+            
             series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[2])));
             series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[2])));
             series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[2])));
@@ -92,27 +96,32 @@ public class DataConnectionsController implements Initializable {
                     
                     label.setText("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue()));
                     Tooltip.install(data.getNode(), new Tooltip("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue())));
+                    
                 }
                 
             });
             
         }
+        
     }
     
     public void murderAndManslaughterChart(ActionEvent event){
+        
         lineChart.getData().clear();
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        
-            
             for(int j=0; j<tableData.size(); j++){
+                
                 if(tableData.get(j)[4].contains(".")){
+                    
                     int error = tableData.get(j)[4].indexOf(".");
                     tableData.get(j)[4] = tableData.get(j)[4].substring(0, error);
+                    
                 } 
                 
             }
+            
             series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[4])));
             series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[4])));
             series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[4])));
@@ -146,27 +155,32 @@ public class DataConnectionsController implements Initializable {
                     
                     label.setText("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue()));
                     Tooltip.install(data.getNode(), new Tooltip("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue())));
+                    
                 }
                 
             });
             
         }
+        
     }
     
     public void rapeChart(ActionEvent event){
+        
         lineChart.getData().clear();
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        
-            
             for(int j=0; j<tableData.size(); j++){
+                
                 if(tableData.get(j)[8].contains(".")){
+                    
                     int error = tableData.get(j)[8].indexOf(".");
                     tableData.get(j)[8] = tableData.get(j)[8].substring(0, error);
+                    
                 } 
                 
             }
+            
             series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[8])));
             series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[8])));
             series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[8])));
@@ -200,27 +214,32 @@ public class DataConnectionsController implements Initializable {
                     
                     label.setText("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue()));
                     Tooltip.install(data.getNode(), new Tooltip("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue())));
+                    
                 }
                 
             });
             
         }
+        
     }
     
     public void robberyChart(ActionEvent event){
+        
         lineChart.getData().clear();
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        
-            
             for(int j=0; j<tableData.size(); j++){
+                
                 if(tableData.get(j)[10].contains(".")){
+                    
                     int error = tableData.get(j)[10].indexOf(".");
                     tableData.get(j)[10] = tableData.get(j)[10].substring(0, error);
+                    
                 } 
                 
             }
+            
             series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[10])));
             series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[10])));
             series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[10])));
@@ -254,27 +273,32 @@ public class DataConnectionsController implements Initializable {
                     
                     label.setText("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue()));
                     Tooltip.install(data.getNode(), new Tooltip("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue())));
+                    
                 }
                 
             });
             
         }
+        
     }
     
     public void aggravatedAssaultChart(ActionEvent event){
+        
         lineChart.getData().clear();
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        
-            
             for(int j=0; j<tableData.size(); j++){
+                
                 if(tableData.get(j)[12].contains(".")){
+                    
                     int error = tableData.get(j)[12].indexOf(".");
                     tableData.get(j)[12] = tableData.get(j)[12].substring(0, error);
+                    
                 } 
                 
             }
+            
             series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[12])));
             series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[12])));
             series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[12])));
@@ -308,27 +332,32 @@ public class DataConnectionsController implements Initializable {
                     
                     label.setText("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue()));
                     Tooltip.install(data.getNode(), new Tooltip("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue())));
+                    
                 }
                 
             });
             
         }
+        
     }
     
     public void burglaryChart(ActionEvent event){
+        
         lineChart.getData().clear();
         
         XYChart.Series<String,Number> series = new XYChart.Series<>();
         
-        
-            
             for(int j=0; j<tableData.size(); j++){
+                
                 if(tableData.get(j)[16].contains(".")){
+                    
                     int error = tableData.get(j)[16].indexOf(".");
                     tableData.get(j)[16] = tableData.get(j)[16].substring(0, error);
+                    
                 } 
                 
             }
+            
             series.getData().add(new XYChart.Data("1997", Integer.parseInt(tableData.get(0)[16])));
             series.getData().add(new XYChart.Data("1998", Integer.parseInt(tableData.get(1)[16])));
             series.getData().add(new XYChart.Data("1999", Integer.parseInt(tableData.get(2)[16])));
@@ -362,14 +391,17 @@ public class DataConnectionsController implements Initializable {
                     
                     label.setText("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue()));
                     Tooltip.install(data.getNode(), new Tooltip("Year : " + data.getXValue() + "\nRate : " + String.valueOf(data.getYValue())));
+                    
                 }
                 
             });
             
         }
+        
     }
     
     public void setData(ArrayList<String[]> data){
         tableData = data;
     }
+    
 }

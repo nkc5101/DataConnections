@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dataconnections.DataConnectionsController">
+<AnchorPane id="AnchorPane" prefHeight="604.0" prefWidth="852.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dataconnections.DataConnectionsController">
     <children>
       <LineChart fx:id="lineChart" prefHeight="558.0" prefWidth="852.0" title="FBI Crime Statistics">
         <xAxis>
@@ -18,15 +18,15 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </LineChart>
-      <Button fx:id="loadButton" layoutX="692.0" layoutY="559.0" mnemonicParsing="false" onAction="#loadChart" text="Violent Crime" />
-      <Label fx:id="label" layoutX="40.0" layoutY="544.0" prefHeight="55.0" prefWidth="170.0">
+      <Button fx:id="loadButton" layoutX="701.0" layoutY="559.0" mnemonicParsing="false" onAction="#loadChart" text="Violent Crime" />
+      <Label fx:id="label" layoutX="40.0" layoutY="550.0" prefHeight="49.0" prefWidth="136.0">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Button fx:id="murderAndManslaughterButton" layoutX="511.0" layoutY="559.0" mnemonicParsing="false" onAction="#murderAndManslaughterChart" text="Murder and Manslaughter" />
-      <Button fx:id="rapeButton" layoutX="434.0" layoutY="559.0" mnemonicParsing="false" onAction="#rapeChart" text="Rape" />
-      <Button fx:id="robberyButton" layoutX="341.0" layoutY="559.0" mnemonicParsing="false" onAction="#robberyChart" text="Robbery" />
-      <Button fx:id="aggravatedAssaultButton" layoutX="196.0" layoutY="559.0" mnemonicParsing="false" onAction="#aggravatedAssaultChart" text="Aggravated Assault" />
-      <Button fx:id="burglaryButton" layoutX="103.0" layoutY="559.0" mnemonicParsing="false" onAction="#burglaryChart" text="Burglary" />
+      <Button fx:id="murderAndManslaughterButton" layoutX="531.0" layoutY="559.0" mnemonicParsing="false" onAction="#murderAndManslaughterChart" text="Murder and Manslaughter" />
+      <Button fx:id="rapeButton" layoutX="472.0" layoutY="559.0" mnemonicParsing="false" onAction="#rapeChart" text="Rape" />
+      <Button fx:id="robberyButton" layoutX="396.0" layoutY="559.0" mnemonicParsing="false" onAction="#robberyChart" text="Robbery" />
+      <Button fx:id="aggravatedAssaultButton" layoutX="262.0" layoutY="559.0" mnemonicParsing="false" onAction="#aggravatedAssaultChart" text="Aggravated Assault" />
+      <Button fx:id="burglaryButton" layoutX="187.0" layoutY="559.0" mnemonicParsing="false" onAction="#burglaryChart" text="Burglary" />
     </children>
 </AnchorPane>
